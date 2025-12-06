@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="project.css">
+    <title>Projects</title>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">Portfolio</a>
+
+    <div class="menu-btn" id="menu-btn">☰</div>
+
+    <ul class="nav-links" id="nav-links">   
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<h1 id="project">Projects</h1>
+
+
+<!-- PROJECT 1 -->
+<div class="project-row">
+  <div class="project-text">
+    <h2>Manhwa Website</h2>
+    <p>A website that offers a wide selection of manhwa titles for readers to explore and enjoy. Features include user accounts, reading lists, and more.</p>
+  </div>
+
+  <div class="project-img">
+    <img src="comick.png" alt="Manhwa Website">
+  </div>
+</div>
+
+<!-- PROJECT 2 (reversed layout) -->
+<div class="project-row reverse">
+  <div class="project-img">
+    <img src="hydropole.png" alt="Hydro-Pole Website">
+  </div>
+
+  <div class="project-text">
+    <h2>HYDRO-Pole Website</h2>
+    <p>A hydrology monitoring dashboard that displays real-time water level alerts, map views, and station details for easy monitoring.</p>
+  </div>
+</div>
+
+
+
+<script>
+    const menu = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
+
+    // open/close menu
+    menu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        overlay.classList.toggle("show");
+    });
+
+    // click outside menu = close
+    overlay.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+</script>
+
+</body>
+</html>
