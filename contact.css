@@ -113,10 +113,11 @@ body {
     /* Hide desktop nav links */
     .navbar ul {
         display: none;
-    }
+    }   
 
     .contact-box {
-        margin: 0 15px;
+        margin: 0 20px;
+        margin-bottom: 80px;
     }
 
             /* overlay behind menu */
@@ -163,7 +164,7 @@ body {
 
     .contact-box {
         margin: 0 20px;
-        margin-top: -300px;
+        margin-bottom: 80px;
     }
 
             /* overlay behind menu */
