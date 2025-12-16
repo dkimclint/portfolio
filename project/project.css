@@ -1,0 +1,233 @@
+/* -----------------------------------
+   GLOBAL
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f241f;
+    color: white;
+    padding-top: 120px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* -----------------------------------
+   NAVBAR
+------------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(31, 36, 31, 0.35);
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: showNavbar 1.3s forwards;
+}
+
+@keyframes showNavbar {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar ul li:hover a{
+    color: orangered;
+}
+.navbar ul li.active a {
+    color: aqua;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* -----------------------------------
+   PROJECT PAGE
+------------------------------------*/
+#project {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 80px auto;
+    width: 90%;
+}
+
+.project-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    width: 45%;
+}
+
+.project-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Images */
+.project-img,
+.project-img1 {
+    width: 50%;
+    text-align: center;
+}
+
+.project-img1 img,
+.project-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+.project-img img:hover,
+.project-img1 img:hover {
+    transform: scale(1.05);
+}
+
+/* Icons */
+.emo,
+.ticon {
+    margin-top: 10px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* -----------------------------------
+   RESPONSIVE — TABLETS
+------------------------------------*/
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar ul {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 60%;
+        height: 100vh;
+        background: #0f1110;
+        flex-direction: column;
+        padding-top: 120px;
+        padding-left: 40px;
+        transition: .4s;
+    }
+
+    .navbar ul.active {
+        right: 0;
+    }
+
+    /* Projects */
+    .project-row,
+    .project-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-text,
+    .project-img,
+    .project-img1 {
+        width: 100%;
+    }
+}
+
+/* -----------------------------------
+   RESPONSIVE — PHONES
+------------------------------------*/
+@media (max-width: 480px) {
+
+    #project {
+        font-size: 32px;
+    }
+
+    .project-text h2 {
+        font-size: 26px;
+    }
+
+    .project-text p {
+        font-size: 15px;
+    }
+
+    .navbar .logo {
+        font-size: 22px;
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+            /* overlay behind menu */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        display: none;
+        z-index: 5;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}

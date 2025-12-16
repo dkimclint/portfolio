@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: #1f241f;
+    overflow-x: hidden;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 35px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.navbar ul li:hover a {
+    color: orangered;
+}
+
+.navbar ul li.active a {
+    color: aqua;
+}
+
+/* HAMBURGER (DEFAULT HIDDEN ON DESKTOP) */
+.menu {
+    display: none;
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.contact-box {
+    background: #2c302c;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 15px #ffffff55;
+    margin-top: -50px;
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 768px) {
+
+    /* Show hamburger button */
+    .menu {
+        display: block;
+        font-size: 34px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Hide desktop nav links */
+    .navbar ul {
+        display: none;
+    }   
+
+    .contact-box {
+        margin: 0 20px;
+        margin-bottom: 80px;
+    }
+
+            /* overlay behind menu */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        display: none;
+        z-index: 5;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+
+/* ---------------- PHONE ---------------- */
+
+@media (max-width: 480px) {
+
+    /* Mobile sidebar */
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: #1f241f;
+        padding-top: 120px;
+        padding-left: 30px;
+        gap: 25px;
+        transition: .4s ease;
+    }
+
+    .navbar ul.active {
+        right: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 22px;
+    }
+
+    .contact-box {
+        margin: 0 20px;
+        margin-bottom: 80px;
+    }
+
+            /* overlay behind menu */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        display: none;
+        z-index: 5;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}

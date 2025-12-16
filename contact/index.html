@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/contact/contact.css">
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <div class="overlay" id="overlay"></div>
+<nav class="navbar">
+    <a href="/home/" class="logo">Portfolio</a>
+
+    <div class="menu" id="menu">☰</div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/home/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/project/">Projects</a></li>
+        <li class="active"><a href="/contact/">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+    <div class="contact-box">
+        <p>You can reach me through the following platforms:</p><br>
+
+        <p><i class="fa-brands fa-facebook"></i> :
+            <a href="https://www.facebook.com/dkimclint" target="_blank" rel="noopener noreferrer">Kim Clint Duhaylungsod</a>
+        </p>
+
+        <p><i class="fa-brands fa-instagram"></i> :
+            <a href="https://www.instagram.com/dkimclintx" target="_blank" rel="noopener noreferrer">dkimclintx</a>
+        </p>
+
+        <p><i class="fa-brands fa-twitter"></i> :
+            <a href="https://x.com/valleyorchid00" target="_blank" rel="noopener noreferrer">dkimclint</a>
+        </p>
+
+        <p><i class="fa-solid fa-at"></i> :
+            <a href="mailto:dkimclint@gmail.com" target="_blank" rel="noopener noreferrer">dkimclint@gmail.com</a>
+        </p>
+
+        <p><i class="fa-brands fa-github"></i> :
+            <a href="https://github.com/dkimclint" target="_blank" rel="noopener noreferrer">dkimclint</a>
+        </p>
+
+        <p><i class="fa-brands fa-linkedin"></i> :
+            <a href="https://www.linkedin.com/in/kim-clint-duhaylungsod-598423338/" target="_blank" rel="noopener noreferrer">Kim Clint Duhaylungsod</a>
+        </p>
+    </div>
+</section>
+
+<script>
+    const menu = document.getElementById("menu");
+    const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
+
+    // open/close menu
+    menu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        overlay.classList.toggle("show");
+    });
+
+    // click outside menu = close
+    overlay.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+</script>
+
+</body>
+</html>

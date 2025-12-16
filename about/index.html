@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/about/about.css">
+    <title>About</title>
+</head>
+
+<body>
+
+<!-- overlay for closing menu -->
+<div class="overlay" id="overlay"></div>
+
+<nav class="navbar">
+    <a href="/home/" class="logo">Portfolio</a>
+
+    <div class="menu-btn" id="menu-btn">☰</div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/home/">Home</a></li>
+        <li class="active"><a href="/about/">About</a></li>
+        <li><a href="/project/">Projects</a></li>
+        <li><a href="/contact/">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+    <div class="home-info">
+        <h1>Kim Clint Duhaylungsod</h1>
+        <h2>I'm a 
+            <span style="--i:4" data-text="Frontend Developer">Frontend Developer</span>
+            <span style="--i:3" data-text="Data Analyst">Data Analyst</span>
+            <span style="--i:2" data-text="Software Developer">Software Developer</span>
+            <span style="--i:1" data-text="Programmer">Programmer</span>
+        </h2>
+
+        <p>A motivated BS Computer Engineering student from STI College Malolos, graduating in 2026, with strong interest in embedded systems and programming. Eager to contribute to a dynamic tech company where I can apply my technical skills, gain real-world experience, and continue growing as a developer.</p>
+    </div>
+</section>
+
+<section class="about-me">
+    <div class="re">
+        <a href="/about/Resume.docx" class="cv-btn">Download CV</a>
+    </div>
+</section>
+
+<script>
+    const menu = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
+
+    // open/close menu
+    menu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        overlay.classList.toggle("show");
+    });
+
+    // click outside menu = close
+    overlay.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+</script>
+
+</body>
+</html>

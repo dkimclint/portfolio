@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/project/project.css">
+    <title>Projects</title>
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <nav class="navbar">
+        <a href="/home/" class="logo">Portfolio</a>
+
+        <div class="menu-btn" id="menu-btn">☰</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/home/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li class="active"><a href="/project/">Projects</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="project">Projects</h1>
+
+
+    <!-- manhwa website -->
+    <div class="project-row">
+        <div class="project-text">
+            <h2>Manhwa Website</h2>
+            <p>
+                A website that offers a wide selection of manhwa titles for readers to explore and enjoy.
+                Features include user accounts, reading lists, and more.
+            </p>
+        </div>
+
+        <div class="project-img1">
+            <a href="https://comick-kraze.vercel.app">
+                <img src="/project/comick.png" alt="Manhwa Website">
+            </a>
+            <p class="emo">
+                <i class='bxl bx-html5' title="HTML5"></i>
+                <i class='bxl bx-react' title="React"></i>
+                <i class='bxl bx-tailwind-css' title="Tailwind CSS"></i>
+                <i class='bxl bx-javascript' title="Javascript"></i>
+                <i class='bxl bx-vite-js' title="Vite"></i>
+                <i class='bxl bx-supabase' title="Supabase"></i>
+                <i class='bxl bx-firebase' title="Firebase"></i>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- hydropole website -->
+    <div class="project-row reverse">
+        <div class="project-text">
+            <h2>HYDRO-Pole Website</h2>
+            <p>
+                A hydrology monitoring dashboard that displays real-time water level alerts,
+                map views, and station details for easy monitoring.
+            </p>
+        </div>
+
+        <div class="project-img">
+            <a href="https://hydropole-v1.vercel.app">
+                <img src="/project/hydropole.png" alt="Hydro-Pole Website">
+            </a>
+            <p class="ticon">
+                <i class='bxl bx-html5' title="HTML5"></i>
+                <i class='bxl bx-css3' title="CSS3"></i>
+                <i class='bxl bx-javascript' title="Javascript"></i>
+                <i class='bxl bx-supabase' title="Supabase"></i>
+                <i class='bxl bx-github' title="GitHub"></i>
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        const menu = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        const overlay = document.getElementById("overlay");
+
+        // open/close menu
+        menu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            overlay.classList.toggle("show");
+        });
+
+        // click outside menu = close
+        overlay.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.classList.remove("show");
+        });
+    </script>
+
+</body>
+
+</html>
